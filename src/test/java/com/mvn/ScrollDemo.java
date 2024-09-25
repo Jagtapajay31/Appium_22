@@ -9,12 +9,20 @@ public class ScrollDemo extends BaseTest {
 	@Test
 	public void scroll() throws InterruptedException {
 		
-		driver.findElement(AppiumBy.accessibilityId("Views")).click();
-		Thread.sleep(3000);
+//		driver.findElement(AppiumBy.accessibilityId("Views")).click();
+//		Thread.sleep(3000);
+//		
+//		driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector())" + ".scrollIntoView(text(\"WebView\"));"))
+//		.click();
+//		Thread.sleep(5000);
 		
-		driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector())" + ".scrollIntoView(text(\"WebView\"));"))
-		.click();
-		Thread.sleep(5000);
+		driver.findElement(AppiumBy.accessibilityId("Animation")).click();
+		Thread.sleep(3000);
+		driver.findElement(AppiumBy.accessibilityId("Bouncing Balls")).click();
+		Thread.sleep(3000);
+		driver.findElement(AppiumBy.accessibilityId("Play")).click();
+		Thread.sleep(3000);
+				
 		
 		
 	}
