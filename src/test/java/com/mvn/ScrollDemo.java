@@ -12,9 +12,9 @@ public class ScrollDemo extends BaseTest {
 //		driver.findElement(AppiumBy.accessibilityId("Views")).click();
 //		Thread.sleep(3000);
 //		
-//		driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector())" + ".scrollIntoView(text(\"WebView\"));"))
-//		.click();
-//		Thread.sleep(5000);
+		driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector())" + ".scrollIntoView(text(\"WebView\"));"))
+		.click();
+		Thread.sleep(5000);
 		
 		driver.findElement(AppiumBy.accessibilityId("Animation")).click();
 		Thread.sleep(3000);
