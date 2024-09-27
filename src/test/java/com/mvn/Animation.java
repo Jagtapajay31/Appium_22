@@ -150,11 +150,6 @@ public class Animation extends BaseTest {
 		driver.findElement(AppiumBy.accessibilityId("Run")).click();
 		Thread.sleep(2000);
 		
-//		driver.findElement(By.xpath("//android.widget.Button[@text='360']")).click();
-//		Thread.sleep(5000);
-//		driver.findElement(AppiumBy.accessibilityId("Run")).click();
-//		Thread.sleep(2000);
-		
 		driver.navigate().back();
 		Thread.sleep(2000);
 		
