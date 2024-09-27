@@ -44,6 +44,16 @@ public class BaseTest {
 				ImmutableMap.of("elementId",((RemoteWebElement)ele).getId(),
 						"duration",2000));
 	}
+	
+	public void swipeAction(WebElement ele,String direction)
+	{
+		((JavascriptExecutor) driver).executeScript("mobile: swipeGesture", ImmutableMap.of(
+				"elementId", ((RemoteWebElement)ele).getId(),
+			 
+			    "direction", direction,
+			    "percent", 0.15
+			));		
+	}
 
 	@AfterTest
 	public void tearDown() throws InterruptedException {

@@ -150,6 +150,9 @@ public class Animation extends BaseTest {
 		driver.findElement(AppiumBy.accessibilityId("Run")).click();
 		Thread.sleep(2000);
 		
+//		driver.findElement(By.id("io.appium.android.apis:id/seekBar")
+		
+		
 		driver.navigate().back();
 		Thread.sleep(2000);
 		
