@@ -58,7 +58,7 @@ public class BaseTest {
 			    "percent", 0.15
 			));		
 	}
-	public void seekbar(WebElement seekBar) {
+//	public void seekbar(WebElement seekBar) {
 //		int xAxisStartPoint=slider.getLocation().getX();
 //		int xAxisEndPoint=xAxisStartPoint+slider.getSize().getWidth();
 //		int yAxisStartPoint=slider.getLocation().getY();
@@ -71,29 +71,29 @@ public class BaseTest {
 //		.release()
 //		.perform();
 		
-		//Get start point of seekbar.
-	       int startX = seekBar.getLocation().getX();
-	       System.out.println(startX);
-	    
-	      //Get vertical location of seekbar.
-	       int startY = seekBar.getLocation().getY();
-	       System.out.println(startY);
-	    
-	       //Get end point of seekbar.
-	       int endX = seekBar.getSize().getWidth();
-	       System.out.println(endX);
-	    
-	    
-	       //Set seekbar move to position.
-	       //endX * 0.6 means at 60% of seek bar width.
-	      //endX * 0.9 means at 100% of seek bar width.
-	       int moveToXDirectionAt = (int) (endX * 0.90);
-	       System.out.println("Moving seek bar at " + moveToXDirectionAt+" In X direction.");
-	    
-	       //Moving seekbar using TouchAction class.
-	       TouchAction act=new TouchAction(driver);
-	       act.press(PointOption.point(startX,startY)).moveTo(PointOption.point(moveToXDirectionAt,startY)).release().perform();
-	}
+//		//Get start point of seekbar.
+//	       int startX = seekBar.getLocation().getX();
+//	       System.out.println(startX);
+//	    
+//	      //Get vertical location of seekbar.
+//	       int startY = seekBar.getLocation().getY();
+//	       System.out.println(startY);
+//	    
+//	       //Get end point of seekbar.
+//	       int endX = seekBar.getSize().getWidth();
+//	       System.out.println(endX);
+//	    
+//	    
+//	       //Set seekbar move to position.
+//	       //endX * 0.6 means at 60% of seek bar width.
+//	      //endX * 0.9 means at 100% of seek bar width.
+//	       int moveToXDirectionAt = (int) (endX * 0.90);
+//	       System.out.println("Moving seek bar at " + moveToXDirectionAt+" In X direction.");
+//	    
+//	       //Moving seekbar using TouchAction class.
+//	       TouchAction act=new TouchAction(driver);
+//	       act.press(PointOption.point(startX,startY)).moveTo(PointOption.point(moveToXDirectionAt,startY)).release().perform();
+//	}
 
 	@AfterTest
 	public void tearDown() throws InterruptedException {

@@ -148,11 +148,13 @@ public class Animation extends BaseTest {
 		.click();
 		Thread.sleep(3000);
 		
-		driver.findElement(AppiumBy.accessibilityId("Run")).click();
+		
+		
+		WebElement s1= driver.findElement(By.xpath("io.appium.android.apis:id/seekBar"));
+//		seekbar(s1);
 		Thread.sleep(2000);
 		
-		WebElement s1=driver.findElement(By.xpath("io.appium.android.apis:id/seekBar")).click();
-		seekbar(s1);
+		driver.findElement(AppiumBy.accessibilityId("Run")).click();
 		Thread.sleep(2000);
 		
 		
