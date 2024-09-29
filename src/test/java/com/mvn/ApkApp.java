@@ -1,7 +1,14 @@
 package com.mvn;
 
+import static org.testng.Assert.assertEquals;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebElement;
 import org.testng.annotations.Test;
+
+import com.google.common.collect.ImmutableMap;
 
 import io.appium.java_client.AppiumBy;
 
@@ -99,8 +106,8 @@ public class ApkApp extends BaseTest {
 //			Thread.sleep(2000);
 //		
 //			
-		driver.findElement(AppiumBy.accessibilityId("Activity")).click();
-		Thread.sleep(2000);	
+//		driver.findElement(AppiumBy.accessibilityId("Activity")).click();
+//		Thread.sleep(2000);	
 //		
 //		driver.findElement(AppiumBy.accessibilityId("Animation")).click();
 //		Thread.sleep(2000);
@@ -194,11 +201,7 @@ public class ApkApp extends BaseTest {
 //			Thread.sleep(2000);
 //			driver.navigate().back();
 //			Thread.sleep(2000);
-		
-		
-		
-		
-		
+//		
 //		driver.findElement(AppiumBy.accessibilityId("Custom Dialog")).click();
 //		Thread.sleep(2000);
 //		driver.navigate().back();
@@ -280,20 +283,20 @@ public class ApkApp extends BaseTest {
 //		Thread.sleep(2000);
 //		driver.navigate().back();
 //		Thread.sleep(2000);		
-		
+//		
 //		driver.findElement(AppiumBy.accessibilityId("QuickContactsDemo")).click();
 //		Thread.sleep(2000);
-		
-		driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector())" + ""
-				+ ".scrollIntoView(text(\"Receive Result\"));"))
-		.click();
-		Thread.sleep(2000);
+//		
+//		driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector())" + ""
+//				+ ".scrollIntoView(text(\"Receive Result\"));"))
+//		.click();
+//		Thread.sleep(2000);
 //		driver.findElement(AppiumBy.accessibilityId("Get Result")).click();
 //		Thread.sleep(2000);
 //		driver.findElement(AppiumBy.accessibilityId("Corky")).click();
 //		Thread.sleep(2000);
-		driver.navigate().back();
-		Thread.sleep(2000);
+//		driver.navigate().back();
+//		Thread.sleep(2000);
 //		
 //		driver.findElement(AppiumBy.accessibilityId("Recreate")).click();
 //		Thread.sleep(2000);
@@ -320,76 +323,163 @@ public class ApkApp extends BaseTest {
 //		driver.navigate().back();
 //		Thread.sleep(2000);
 //		
-		driver.findElement(AppiumBy.accessibilityId("Secure Surfaces")).click();
-		Thread.sleep(2000);
-				driver.findElement(AppiumBy.accessibilityId("Secure Dialog")).click();
-				Thread.sleep(2000);
-				driver.findElement(AppiumBy.accessibilityId("Show secure dialog")).click();
-				Thread.sleep(2000);
-				driver.findElement(By.id("android:id/button1")).click();
-				Thread.sleep(2000);
-				driver.navigate().back();
-				Thread.sleep(2000);
-			
-			driver.findElement(AppiumBy.accessibilityId("Secure Surface View")).click();
-			Thread.sleep(2000);	
-			driver.navigate().back();
-			Thread.sleep(2000);
-			
-			driver.findElement(AppiumBy.accessibilityId("Secure Window")).click();
-			Thread.sleep(2000);
-			driver.navigate().back();
-			driver.navigate().back();
-			Thread.sleep(2000);
-		
-		
+//		driver.findElement(AppiumBy.accessibilityId("Secure Surfaces")).click();
+//		Thread.sleep(2000);
+//				driver.findElement(AppiumBy.accessibilityId("Secure Dialog")).click();
+//				Thread.sleep(2000);
+//				driver.findElement(AppiumBy.accessibilityId("Show secure dialog")).click();
+//				Thread.sleep(2000);
+//				driver.findElement(By.id("android:id/button1")).click();
+//				Thread.sleep(2000);
+//				driver.navigate().back();
+//				Thread.sleep(2000);
+//			
+//			driver.findElement(AppiumBy.accessibilityId("Secure Surface View")).click();
+//			Thread.sleep(2000);	
+//			driver.navigate().back();
+//			Thread.sleep(2000);
+//			
+//			driver.findElement(AppiumBy.accessibilityId("Secure Window")).click();
+//			Thread.sleep(2000);
+//			driver.navigate().back();
+//			driver.navigate().back();
+//			Thread.sleep(2000);
+//		
+//		
 //		driver.findElement(AppiumBy.accessibilityId("SetWallpaper")).click();
 //		Thread.sleep(2000);
-		
-		driver.findElement(AppiumBy.accessibilityId("Soft Input Modes")).click();
-		Thread.sleep(2000);
-		driver.navigate().back();
-		Thread.sleep(2000);
-		
-		driver.findElement(AppiumBy.accessibilityId("Translucent")).click();
-		Thread.sleep(2000);
-		driver.navigate().back();
-		Thread.sleep(2000);
-		
-		driver.findElement(AppiumBy.accessibilityId("Translucent Blur")).click();
-		Thread.sleep(2000);
-		driver.navigate().back();
-		Thread.sleep(2000);
-		
-		driver.findElement(AppiumBy.accessibilityId("Wallpaper")).click();
-		Thread.sleep(2000);
-		driver.navigate().back();
-		Thread.sleep(2000);
-		
-//		driver.findElement(AppiumBy.accessibilityId("Alarm")).click();
+//		
+//		driver.findElement(AppiumBy.accessibilityId("Translucent Blur")).click();
+//		driver.findElement(AppiumBy.accessibilityId("Soft Input Modes")).click();
 //		Thread.sleep(2000);
-//
 //		driver.navigate().back();
 //		Thread.sleep(2000);
 //		
+//		driver.findElement(AppiumBy.accessibilityId("Translucent")).click();
+//		Thread.sleep(2000);
+//		driver.navigate().back();
+//		Thread.sleep(2000);
+//		
+//		Thread.sleep(2000);
+//		driver.navigate().back();
+//		Thread.sleep(2000);
+//		
+//		driver.findElement(AppiumBy.accessibilityId("Wallpaper")).click();
+//		Thread.sleep(2000);
+//		driver.navigate().back();
+//		Thread.sleep(2000);
+//		
+//		driver.findElement(AppiumBy.accessibilityId("Alarm")).click();
+//		Thread.sleep(2000);
+//			driver.findElement(AppiumBy.accessibilityId("Alarm Controller")).click();
+//			Thread.sleep(2000);
+//			driver.findElement(AppiumBy.accessibilityId("One Shot Alarm")).click();
+//			Thread.sleep(2000);
+//			driver.findElement(AppiumBy.accessibilityId("Start Repeating Alarm")).click();
+//			Thread.sleep(2000);
+//			driver.findElement(AppiumBy.accessibilityId("Stop Repeating Alarm")).click();
+//			Thread.sleep(2000);
+//			driver.navigate().back();
+//			Thread.sleep(2000);
+//			driver.findElement(AppiumBy.accessibilityId("Alarm Service")).click();
+//			Thread.sleep(2000);
+//			driver.findElement(AppiumBy.accessibilityId("Start Alarm Service")).click();
+//			Thread.sleep(2000);
+//			driver.findElement(AppiumBy.accessibilityId("Stop Alarm Service")).click();
+//			Thread.sleep(2000);
+//			driver.navigate().back();
+//			driver.navigate().back();
+//			Thread.sleep(2000);
+//		
 //		driver.findElement(AppiumBy.accessibilityId("Alert Dialogs")).click();
 //		Thread.sleep(2000);
-//
 //		driver.navigate().back();
 //		Thread.sleep(2000);
 //		
 //		driver.findElement(AppiumBy.accessibilityId("Device Admin")).click();
 //		Thread.sleep(2000);
-//
 //		driver.navigate().back();
 //		Thread.sleep(2000);
 //		
-//		driver.findElement(AppiumBy.accessibilityId("Fragment")).click();
-//		Thread.sleep(2000);
-//
-//		driver.navigate().back();
-//		Thread.sleep(2000);
+		driver.findElement(AppiumBy.accessibilityId("Fragment")).click();
+		Thread.sleep(2000);
 //		
+//			driver.findElement(AppiumBy.accessibilityId("Alert Dialog")).click();
+//			Thread.sleep(2000);
+//				driver.findElement(AppiumBy.accessibilityId("Show")).click();
+//				Thread.sleep(2000);
+//				driver.findElement(By.id("android:id/button1")).click();
+//				Thread.sleep(2000);
+//				driver.navigate().back();
+//				Thread.sleep(2000);
+//				
+//			driver.findElement(AppiumBy.accessibilityId("Arguments")).click();
+//			Thread.sleep(2000);
+//			driver.navigate().back();
+//			Thread.sleep(2000);
+//
+////			driver.findElement(AppiumBy.accessibilityId("Context Menu")).click();
+////			Thread.sleep(2000);
+////			WebElement ele;
+////			((JavascriptExecutor)driver).executeScript("mobile: longClickGesture",
+////					ImmutableMap.of("elementId",((RemoteWebElement)ele).getId(),
+////							"duration",2000));
+////				ele= driver.findElement(AppiumBy.accessibilityId("Long press me")).click();
+////				longPressAction(ele);
+////				Thread.sleep(10000);
+////				String msg=driver.findElement(By.id("android:id/content")).click();
+////				assertEquals(msg, "Sample menu");
+////				Thread.sleep(2000);
+////				driver.findElement(AppiumBy.accessibilityId("Long press me")).click();
+////				Thread.sleep(2000);
+////				driver.findElement(AppiumBy.accessibilityId("android:id/content")).click();
+////				Thread.sleep(2000);
+////				driver.navigate().back();
+////				Thread.sleep(2000);
+//				
+//			driver.findElement(AppiumBy.accessibilityId("Custom Animations")).click();
+//			Thread.sleep(2000);
+//			for (int i = 1; i < 5; i++) {
+//				driver.findElement(AppiumBy.accessibilityId("Push")).click();
+//				Thread.sleep(2000);
+//				driver.findElement(AppiumBy.accessibilityId("Pop")).click();
+//				Thread.sleep(2000);
+//			}
+//			driver.navigate().back();
+//			driver.navigate().back();
+//			driver.navigate().back();
+//			driver.navigate().back();
+//			driver.navigate().back();
+//			driver.navigate().back();
+//			Thread.sleep(2000);
+//			
+			driver.findElement(AppiumBy.accessibilityId("Dialog")).click();
+			Thread.sleep(2000);
+			
+//			driver.findElement(AppiumBy.accessibilityId("Dialog or Activity")).click();
+//			Thread.sleep(2000);
+//			driver.findElement(AppiumBy.accessibilityId("Hide and Show")).click();
+//			Thread.sleep(2000);
+//			driver.findElement(AppiumBy.accessibilityId("Layout")).click();
+//			Thread.sleep(2000);
+//			driver.findElement(AppiumBy.accessibilityId("List Array")).click();
+//			Thread.sleep(2000);
+//			driver.findElement(AppiumBy.accessibilityId("Menu")).click();
+//			Thread.sleep(2000);
+//			driver.findElement(AppiumBy.accessibilityId("Nesting Tabs")).click();
+//			Thread.sleep(2000);
+//			driver.findElement(AppiumBy.accessibilityId("Receive Result")).click();
+//			Thread.sleep(2000);
+//			driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector())" + ""
+//					+ ".scrollIntoView(text(\"Retain Instance\"));")).click();
+//			Thread.sleep(2000);
+//			driver.findElement(AppiumBy.accessibilityId("Stack")).click();
+//			Thread.sleep(2000);
+//			driver.findElement(AppiumBy.accessibilityId("Tabs")).click();
+//			Thread.sleep(2000);
+//			driver.navigate().back();
+//			Thread.sleep(2000);
+		
 //		driver.findElement(AppiumBy.accessibilityId("Launcher Shortcuts")).click();
 //		Thread.sleep(2000);
 //
