@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.mvn.CalculatorDemo">
+      <class name="com.mvn.ScrollDemo">
         <methods>
-          <include name="cal"/>
+          <include name="test"/>
+          <include name="scroll"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.mvn.CalculatorDemo -->
+      </class> <!-- com.mvn.ScrollDemo -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

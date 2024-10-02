@@ -29,9 +29,8 @@ public class ScrollDemo extends BaseTest {
 		.click();
 		Thread.sleep(2000);
 		
-//		WebElement s1=driver.findElement(By.id("io.appium.android.apis:id/seek"));
-//		seekbar(s1);
-//		Thread.sleep(5000);
+		WebElement s1=driver.findElement(By.id("io.appium.android.apis:id/seek"));
+		seekbar(s1);
+		Thread.sleep(5000);
 	}
-
 }

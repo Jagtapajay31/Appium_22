@@ -1,5 +1,6 @@
 package com.mvn;
 
+import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -17,6 +18,8 @@ import com.google.common.collect.ImmutableMap;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
+import io.appium.java_client.service.local.AppiumDriverLocalService;
+import io.appium.java_client.service.local.AppiumServiceBuilder;
 import io.appium.java_client.touch.offset.PointOption;
 
 public class BaseTest {
@@ -24,9 +27,16 @@ public class BaseTest {
 
 	
 	public AndroidDriver driver;
-	
+	AppiumDriverLocalService service;
 	@BeforeTest
 	public void test() throws MalformedURLException, InterruptedException {
+		service=new AppiumServiceBuilder()
+				.withAppiumJS(new File("C:\\Users\\os\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
+				.withIPAddress("127.0.0.1")
+				.usingPort(4723)
+				.build();
+		service.start();
+		
 		UiAutomator2Options options=new UiAutomator2Options();
 		options.setDeviceName("ajay");
 		options.setApp("E:\\Tops 2024\\appium\\apk file-20240916T045753Z-001\\apk file\\ApiDemos-debug.apk");
@@ -58,7 +68,21 @@ public class BaseTest {
 			    "percent", 0.15
 			));		
 	}
-//	public void seekbar(WebElement seekBar) {
+	public void seekbar(WebElement slider) {
+		
+		int xAxisStartPoint=slider.getLocation().getX();
+		int xAxisEndPoint=xAxisStartPoint+slider.getSize().getWidth();
+		int yAxisStartPoint=slider.getLocation().getY();
+		
+		
+		TouchAction action=new TouchAction(driver);
+		
+		action.press(PointOption.point(xAxisStartPoint, yAxisStartPoint))
+		.moveTo(PointOption.point(xAxisEndPoint-100,yAxisStartPoint))
+		.release()
+		.perform();
+
+		
 //		int xAxisStartPoint=slider.getLocation().getX();
 //		int xAxisEndPoint=xAxisStartPoint+slider.getSize().getWidth();
 //		int yAxisStartPoint=slider.getLocation().getY();
@@ -70,7 +94,7 @@ public class BaseTest {
 //		.moveTo(PointOption.point(xAxisEndPoint-50,yAxisStartPoint))
 //		.release()
 //		.perform();
-		
+//		
 //		//Get start point of seekbar.
 //	       int startX = seekBar.getLocation().getX();
 //	       System.out.println(startX);
@@ -93,7 +117,7 @@ public class BaseTest {
 //	       //Moving seekbar using TouchAction class.
 //	       TouchAction act=new TouchAction(driver);
 //	       act.press(PointOption.point(startX,startY)).moveTo(PointOption.point(moveToXDirectionAt,startY)).release().perform();
-//	}
+	}
 
 	@AfterTest
 	public void tearDown() throws InterruptedException {
