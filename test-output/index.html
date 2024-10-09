@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-failed">Default suite</span>
+              <span class="suite-name border-skipped">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\os\AppData\Local\Temp\testng-eclipse--39597185\testng-customsuite.xml</span>
+                    <span>C:\Users\os\AppData\Local\Temp\testng-eclipse--1309848102\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,21 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">1 method,  1 skipped,  </span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods skipped suite-Default_suite"> (hide)</a> <!-- hide-methods skipped suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods skipped suite-Default_suite"> (show)</a> <!-- show-methods skipped suite-Default_suite -->
                     </span>
-                    <div class="method-list-content failed suite-Default_suite">
+                    <div class="method-list-content skipped suite-Default_suite">
                       <span>
-                        <img src="failed.png" width="3%"/>
+                        <img src="skipped.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="com.mvn.ScrollDemo" class="method navigator-link" hash-for-method="scroll">scroll</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Default_suite -->
+                    </div> <!-- method-list-content skipped suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -118,9 +118,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-failed">
+          <div class="suite-Default_suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="skipped.png"/>
               <span class="class-name">com.mvn.ScrollDemo</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -129,41 +129,93 @@
                   <a name="scroll">
                   </a> <!-- scroll -->
                   <span class="method-name">scroll</span>
-                  <div class="stack-trace">org.openqa.selenium.UnsupportedCommandException: The requested resource could not be found, or a request was received using an HTTP method that is not supported by the mapped resource
+                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Check https://github.com/appium/appium/issues/13802 for throubleshooting. Error executing adbExec. Original error: &apos;Command &apos;C:\\Users\\os\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s ddaabb9f shell &apos;settings delete global hidden_api_policy_pre_p_apps;settings delete global hidden_api_policy_p_apps;settings delete global hidden_api_policy&apos;&apos; exited with code 255&apos;; Command output: 
+Exception occurred while executing &apos;delete&apos;:
+java.lang.SecurityException: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS
+	at com.android.providers.settings.SettingsProvider.enforceWritePermission(SettingsProvider.java:2374)
+	at com.android.providers.settings.SettingsProvider.mutateGlobalSetting(SettingsProvider.java:1413)
+	at com.android.providers.settings.SettingsProvider.mutateGlobalSetting(SettingsProvider.java:1405)
+	at com.android.providers.settings.SettingsProvider.deleteGlobalSetting(SettingsProvider.java:1376)
+	at com.android.providers.settings.SettingsProvider.call(SettingsProvider.java:561)
+	at android.content.ContentProvider.call(ContentProvider.java:2448)
+	at android.content.ContentProvider$Transport.call(ContentProvider.java:517)
+	at com.android.providers.settings.SettingsService$MyShellCommand.deleteForUser(SettingsService.java:399)
+	at com.android.providers.settings.SettingsService$MyShellCommand.onCommand(SettingsService.java:281)
+	at android.os.BasicShellCommandHandler.exec(BasicShellCommandHandler.java:98)
+	at android.os.ShellCommand.exec(ShellCommand.java:44)
+	at com.android.providers.settings.SettingsService.onShellCommand(SettingsService.java:49)
+	at android.os.Binder.shellCommand(Binder.java:936)
+	at android.os.Binder.onTransact(Binder.java:820)
+	at android.os.Binder.execTransactInternal(Binder.java:1166)
+	at android.os.Binder.execTransact(Binder.java:1130)
+
+Exception occurred while executing &apos;delete&apos;:
+java.lang.SecurityException: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS
+	at com.android.providers.settings.SettingsProvider.enforceWritePermission(SettingsProvider.java:2374)
+	at com.android.providers.settings.SettingsProvider.mutateGlobalSetting(SettingsProvider.java:1413)
+	at com.android.providers.settings.SettingsProvider.mutateGlobalSetting(SettingsProvider.java:1405)
+	at com.android.providers.settings.SettingsProvider.deleteGlobalSetting(SettingsProvider.java:1376)
+	at com.android.providers.settings.SettingsProvider.call(SettingsProvider.java:561)
+	at android.content.ContentProvider.call(ContentProvider.java:2448)
+	at android.content.ContentProvider$Transport.call(ContentProvider.java:517)
+	at com.android.providers.settings.SettingsService$MyShellCommand.deleteForUser(SettingsService.java:399)
+	at com.android.providers.settings.SettingsService$MyShellCommand.onCommand(SettingsService.java:281)
+	at android.os.BasicShellCommandHandler.exec(BasicShellCommandHandler.java:98)
+	at android.os.ShellCommand.exec(ShellCommand.java:44)
+	at com.android.providers.settings.SettingsService.onShellCommand(SettingsService.java:49)
+	at android.os.Binder.shellCommand(Binder.java:936)
+	at android.os.Binder.onTransact(Binder.java:820)
+	at android.os.Binder.execTransactInternal(Binder.java:1166)
+	at android.os.Binder.execTransact(Binder.java:1130)
+
+Exception occurred while executing &apos;delete&apos;:
+java.lang.SecurityException: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS
+	at com.android.providers.settings.SettingsProvider.enforceWritePermission(SettingsProvider.java:2374)
+	at com.android.providers.settings.SettingsProvider.mutateGlobalSetting(SettingsProvider.java:1413)
+	at com.android.providers.settings.SettingsProvider.mutateGlobalSetting(SettingsProvider.java:1405)
+	at com.android.providers.settings.SettingsProvider.deleteGlobalSetting(SettingsProvider.java:1376)
+	at com.android.providers.settings.SettingsProvider.call(SettingsProvider.java:561)
+	at android.content.ContentProvider.call(ContentProvider.java:2448)
+	at android.content.ContentProvider$Transport.call(ContentProvider.java:517)
+	at com.android.providers.settings.SettingsService$MyShellCommand.deleteForUser(SettingsService.java:399)
+	at com.android.providers.settings.SettingsService$MyShellCommand.onCommand(SettingsService.java:281)
+	at android.os.BasicShellCommandHandler.exec(BasicShellCommandHandler.java:98)
+	at android.os.ShellCommand.exec(ShellCommand.java:44)
+	at com.android.providers.settings.SettingsService.onShellCommand(SettingsService.java:49)
+	at android.os.Binder.shellCommand(Binder.java:936)
+	at android.os.Binder.onTransact(Binder.java:820)
+	at android.os.Binder.execTransactInternal(Binder.java:1166)
+	at android.os.Binder.execTransact(Binder.java:1130)
+ 
+Host info: host: &apos;DESKTOP-DRTC6PB&apos;, ip: &apos;127.0.0.1&apos;
 Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1.1&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [8e270b34-985a-4e90-bfdb-52fed1b7003a, performTouchAction {actions=[{action=press, options={x=0, y=210}}, {action=moveTo, options={x=980, y=210}}, {action=release, options={}}]}]
-Capabilities {appium:app: E:\Tops 2024\appium\apk fil..., appium:appPackage: io.appium.android.apis, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {app: E:\Tops 2024\appium\apk fil..., automationName: UIAutomator2, deviceName: ajay, platformName: ANDROID}, appium:deviceApiLevel: 28, appium:deviceManufacturer: Google, appium:deviceModel: AOSP on IA Emulator, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x1920, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 9, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 1857, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 8e270b34-985a-4e90-bfdb-52fed1b7003a
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+Command: [null, newSession {capabilities=[{appium:deviceName=ajay, platformName=ANDROID, appium:automationName=UIAutomator2, appium:app=E:\Tops 2024\appium\apk file-20240916T045753Z-001\apk file\ApiDemos-debug.apk}], desiredCapabilities=Capabilities {appium:app: E:\Tops 2024\appium\apk fil..., appium:automationName: UIAutomator2, appium:deviceName: ajay, platformName: ANDROID}}]
+Capabilities {appium:app: E:\Tops 2024\appium\apk fil..., appium:automationName: UIAutomator2, appium:deviceName: ajay, platformName: ANDROID}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:140)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:133)
+	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:102)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:182)
 	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:675)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:308)
-	at io.appium.java_client.PerformsTouchActions.performTouchAction(PerformsTouchActions.java:54)
-	at io.appium.java_client.TouchAction.perform(TouchAction.java:196)
-	at com.mvn.BaseTest.seekbar(BaseTest.java:83)
-	at com.mvn.ScrollDemo.scroll(ScrollDemo.java:33)
+	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:274)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:163)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:89)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:101)
+	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:113)
+	at com.mvn.BaseTest.test(BaseTest.java:45)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:652)
+	at org.testng.TestRunner.run(TestRunner.java:614)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
 	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
 	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
@@ -182,11 +234,11 @@ Session ID: 8e270b34-985a-4e90-bfdb-52fed1b7003a
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-failed -->
+          </div> <!-- suite-Default_suite-class-skipped -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\os\AppData\Local\Temp\testng-eclipse--39597185\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\os\AppData\Local\Temp\testng-eclipse--1309848102\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -239,12 +291,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'scroll')
 data.setCell(0, 2, 'com.mvn.ScrollDemo')
-data.setCell(0, 3, 14558);
+data.setCell(0, 3, 0);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 14 seconds</span>
+              <span class="suite-total-time">Total running time: 0 ms</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -272,19 +324,11 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.mvn.ScrollDemo</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">test</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">scroll</span>
-                <span class="method-start">49583 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-test after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">64177 ms</span>
-              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

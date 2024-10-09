@@ -2,6 +2,7 @@ package com.mvn;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.AppiumBy;
@@ -30,7 +31,7 @@ public class ScrollDemo extends BaseTest {
 		Thread.sleep(2000);
 		
 		WebElement s1=driver.findElement(By.id("io.appium.android.apis:id/seek"));
-		seekbar(s1);
+		new Actions(driver).clickAndHold(s1).moveByOffset(30, -10).release().perform();
 		Thread.sleep(5000);
 	}
 }

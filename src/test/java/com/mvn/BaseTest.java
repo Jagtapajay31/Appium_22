@@ -30,12 +30,12 @@ public class BaseTest {
 	AppiumDriverLocalService service;
 	@BeforeTest
 	public void test() throws MalformedURLException, InterruptedException {
-		service=new AppiumServiceBuilder()
-				.withAppiumJS(new File("C:\\Users\\os\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
-				.withIPAddress("127.0.0.1")
-				.usingPort(4723)
-				.build();
-		service.start();
+//		service=new AppiumServiceBuilder()
+//				.withAppiumJS(new File("C:\\Users\\os\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
+//				.withIPAddress("127.0.0.1")
+//				.usingPort(4723)
+//				.build();
+//		service.start();
 		
 		UiAutomator2Options options=new UiAutomator2Options();
 		options.setDeviceName("ajay");
