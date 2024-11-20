@@ -22,7 +22,7 @@ public class DragNDrop extends BaseTest {
 		WebElement source = driver.findElement(By.id("io.appium.android.apis:id/drag_dot_1"));
 		Thread.sleep(3000);
 		dragndrop(source);
-	
+		
 		String msg=driver.findElement(By.id("io.appium.android.apis:id/drag_result_text")).getText();
 		Thread.sleep(2000);
 		

@@ -38,7 +38,6 @@ public class GeneralStore extends BaseTest {
 		
 		driver.findElement(By.id("com.androidsample.generalstore:id/appbar_btn_cart")).click();
 		Thread.sleep(2000);
-		
 	}
 
 }

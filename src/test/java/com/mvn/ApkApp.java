@@ -154,8 +154,8 @@ public class ApkApp extends BaseTest {
 //				
 //				
 //				
-////				driver.findElement(AppiumBy.accessibilityId("Send Call to VoiceMail")).click();
-////				Thread.sleep(2000);
+//				driver.findElement(AppiumBy.accessibilityId("Send Call to VoiceMail")).click();
+//				Thread.sleep(2000);
 //				driver.findElement(AppiumBy.accessibilityId("Text Entry dialog")).click();
 //				Thread.sleep(2000);
 //					driver.findElement(By.id("io.appium.android.apis:id/username_edit")).sendKeys("tops");
@@ -527,8 +527,6 @@ public class ApkApp extends BaseTest {
 //		
 //		driver.navigate().back();
 //		Thread.sleep(2000);
-//		
-//		
 //		
 	}
 }
